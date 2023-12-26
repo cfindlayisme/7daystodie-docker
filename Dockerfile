@@ -3,7 +3,6 @@
 
 FROM gitea.findlayis.me/chuck/steamcmd:latest
 
-# Game install
-RUN /steam/steamcmd.sh +force_install_dir /7daystodie +login anonymous +app_update 294420 +quit
+COPY start.sh /start.sh
 
 CMD /start.sh
